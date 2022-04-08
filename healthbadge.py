@@ -32,9 +32,9 @@ while True:
     call(["screencapture", "screenshot.jpg"])
 
     #Now email myself the image 
-    email_user = 'email'
-    email_password = 'passwd'
-    email_send = 'can match email_user for simplicity or also change if you need to'
+    email_user = 'email' #from address
+    email_password = 'passwd' #from address pswd
+    email_send = 'can match email_user for simplicity or also change if you need to' #to address
 
     subject = 'subject'
 
