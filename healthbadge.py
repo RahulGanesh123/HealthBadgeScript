@@ -17,13 +17,13 @@ while True:
     driver = webdriver.Chrome(executable_path="/Users/rahulganesh/Desktop/Projects/sitelogin/chromedriver")
     url = 'https://studenthealth.ucsc.edu/?_gl=1*1k2r5wh*_ga*MTg2NjExMTE4NC4xNjQ5MTA3MjEx*_ga_BWJ4Z4Y66X*MTY0OTEwNzIxMC4xLjEuMTY0OTEwNzI1MS4w'
     driver.get(url)
-    username = 'Student Gold ID -- the one you use to log into the portal'
-    pswd = 'Password for the portal'
+    username = 'Student Gold ID -- the one you use to log into the portal' #Enter info 
+    pswd = 'Password for the portal' #Enter info
     fillname = driver.find_element(By.XPATH, '//*[@id="username"]').send_keys(username)
     fillpswd = driver.find_element(By.XPATH, '//*[@id="password"]').send_keys(pswd)
     clickbtn = driver.find_element(By.XPATH, '/html/body/section/div/form/button').click()
     driver.implicitly_wait(20)
-    dateofbirth = '07/18/2003'
+    dateofbirth = 'DOB' #Enter info
     filldate = driver.find_element(By.XPATH, '//*[@id="dtDOB"]').send_keys(dateofbirth)
     clicknext = driver.find_element(By.XPATH, '//*[@id="cmdStandardProceed"]').click()
     clickfinal = driver.find_element(By.XPATH, '//*[@id="ctl03"]/div[2]/a').click()
@@ -31,7 +31,7 @@ while True:
     time.sleep(2)
     call(["screencapture", "screenshot.jpg"])
 
-    #Now email myself the image
+    #Now email myself the image 
     email_user = 'email'
     email_password = 'passwd'
     email_send = 'can match email_user for simplicity or also change if you need to'
